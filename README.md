@@ -5,3 +5,6 @@ install dependencies
         
 run project     
     ```node app.js```
+
+default ip: ```localhost```
+default port:```3000```
