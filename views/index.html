@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>FADED bilibili</title>
+        <style>
+            /* body{
+            background:url(http://localhost:3000/images/bilibili.jpg) no-repeat center 0px;
+            background-position: center 0;
+            background-size: cover;
+            } */
+            .content{
+                margin: 0 auto;
+                height: 450px;
+                width: 100%;
+                background-size:100% 450px ;
+                /* margin-top: 25px; */
+            }
+            .content-top{
+                height: 210px;
+                width: 500px;
+                margin: 0 auto;
+            }
+            .login-wrap{
+                width:462px;
+                height: 300px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+
+                margin:0 auto;
+                /* background: url("../Image/Login-Img/form_bg.png") no-repeat; */
+                background-size: 100%;
+            }
+            .login-wrap h3{
+                color:#66ccff;
+                font-size: 22px;
+                text-align: center;
+                margin-bottom:10px; 
+                line-height:60px;  
+            }
+            .login-wrap{
+                background-color: #ffffff;
+            }
+            .name,.psword{
+                border:1px solid #dcdfe6;
+                width: 420px;
+                height: 40px;
+
+                margin: 0 auto;
+                padding-left: 40px;
+                
+            }
+            .name{
+                background: url("./images/id.svg") no-repeat left;
+                background-color:#E8F0FE;
+                background-size:6%; 
+                background-position-x:6px;
+                border-radius: 5px;
+            }
+            .psword{
+                background: url("./images/pw.svg") no-repeat left;
+                background-color:#E8F0FE;
+                background-size:6%; 
+                background-position-x:6px;
+                border-radius: 5px;
+            }
+            .country{
+                border:1px solid #dcdfe6;
+                width:180px;
+                height: 40px;
+                margin-bottom: 20px;
+                padding-left: 40px;
+                color: gray;
+                background-color:#ffffff;
+                background-size:8%; 
+                background-position-x:12px;
+                border-radius:5px 0 0 5px;
+                float: left;
+            }
+            .phone_num_input{
+                border:1px solid #dcdfe6;
+                width: 240px;
+                height: 36px;
+                margin-bottom: 20px;
+                padding-left: 40px;
+                color: gray;
+                background-color:#ffffff;
+                background-size:8%; 
+                background-position-x:12px;
+                border-radius: 0 5px 5px 0;
+            }
+            .safe_level_div{
+                padding: 0;
+                margin: 0;
+                font-family: PingFangSC-Medium;
+                -webkit-tap-highlight-color: rgba(255,255,255,0);
+            }
+            .level_H,.level_M,.level_L{
+                width: 30px;
+                height: 5px;
+                border-radius: 5px;
+                margin-left: 15px;
+                margin-top: 18px;
+                margin-right: 10px;
+                float: left;
+                
+            }
+            .level_L{
+                background: red;
+            }
+            .level_M{
+                background: #ff7f00;
+            }
+            .level_H{
+                background: #f0f028;
+            }
+            .btn input{
+                height: 40px;
+                width: 462px;
+                margin: 20px auto;;
+                border:none;
+                font-size: 16px;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            input:active{border-color:#147a62}
+            .submit{
+                border:1px solid #dcdfe6;
+                background: #f5f5f5;
+                color:gray;
+
+                margin-left: 25px;
+            }   
+    </style>
+    </head>
+
+    <body style="background-color:#ffffff; margin: 0;">
+        <div class="content">
+            <div class ="content-top">
+            <img style="width: 500px; height: 275px; " src="http://localhost:3000/images/bilibili.png">
+            </div>
+            <div class="login-wrap">
+                    <form action="http://localhost:3000/users/login" method="POST" autocomplete="off" onsubmit="return check()">
+                    
+                        <h3>登 录/注 册</h3>
+                        <input class="name" id = "name" type="text" name = "name" placeholder="请输入账号(长度为0-16位)"/>
+                        <h1 style="font-size: 16px; float: left;">安全系数</h1>
+                        <div class="safe_level_div"> 
+                            <div class="level_L"></div>
+                            <div class="level_M"></div>
+                            <div class="level_H"></div>
+                        </div>
+                        <input class="psword" id = "password" type="password" name = "password" placeholder="请输入密码（长度为8-16位）"/>
+                        <br></br>
+                        </br>
+                        <select class="country">           
+                            <option value="1" >中国大陆</option>                      
+                            <option value="2" >澳门特别行政区</option>            
+                            <option value="3" >台湾地区</option>     
+                            <option value="4" >美国</option>       
+                            <option value="5" >香港特别行政区</option>
+                        </select>
+                        <div style="display: flex">
+                        <input class="phone_num_input" type="text" autocomplete="off" placeholder="填写常用手机号">
+                        </div>
+                        <div class="btn">
+                            <input id="btn" class="submit" type="submit"  value="注册" >
+                            <!-- <input id="btn2" class="reset" type="submit" value="登陆" > -->
+                            
+                            <p style="margin: 15px 0 0;color: #b3b3b3;font-size: 14px;">已经有账户?
+                                    <a style="color: #4CAF50;text-decoration: none;" 
+                                    href="http://localhost:3000/get_msg">点击查看用户信息</a>
+                            </p>
+            
+                        </div>
+                    </form>
+                    <img style="position: absolute; top: 300px; right: 200px;" src="http://localhost:3000/images/33.gif">
+
+            </div>
+            
+        </div>
+
+        
+    </body>
+    <script>
+        function check() {
+            var name = document.getElementById("name");
+            var password = document.getElementById("password");
+            console.log(name.value+password.value);
+
+            if(name.value.length > 0 && name.value.length <= 16){ 
+                if(password.value.length >= 8 && password.value.length <= 16){
+                    return true;
+                }else{
+                    alert("密码长度必须为8-16位");
+                }
+            }
+            else {
+               alert("用户名长度必须为0-16位");
+            }
+            return false;
+        }
+    </script>
+</html>

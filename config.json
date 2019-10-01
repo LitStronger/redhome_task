@@ -1,0 +1,11 @@
+{
+	"path":"C:/project/RedHomeTask/views",
+	"port":3000,
+	"db": {
+   			"host"        : "localhost",
+        	"user"        : "root",
+        	"password"    : "123456",
+        	"database"    : "liao",
+        	"port"        : 3306
+ 	 }
+}
